@@ -1,5 +1,5 @@
-# Use the official Tomcat 9 image with Java 11
-FROM tomcat:9.0-jdk11-corretto
+# Use the official Tomcat 9 image with a JRE 11 runtime (smaller than the JDK image, faster pull)
+FROM tomcat:9.0-jre11-temurin
 
 # Remove the default Tomcat welcome applications (optional)
 RUN rm -rf /usr/local/tomcat/webapps/ROOT \
